@@ -1,0 +1,6 @@
+@import tailwind-base;
+#app {
+  @layout min-h-screen flex flex-col ; # simple responsive center
+  background: #fff;
+  color: #16161b;
+}
