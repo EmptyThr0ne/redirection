@@ -1,0 +1,16 @@
+{
+  "name": "redirection",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React + TailwindCSS based app for Re:direction",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "valid": "^17.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2",
+    "vite": "^4"
+  }
+}
