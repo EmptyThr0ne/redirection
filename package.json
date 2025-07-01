@@ -4,13 +4,18 @@
   "private": true,
   "description": "React + TailwindCSS based app for Re:direction",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+	"build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "valid": "^17.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "tailwindcss": "^3.2",
-    "vite": "^4"
+    "vite": "^4.5.0",
+    "tailwindcss": "^3.3.2",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24"
   }
 }
