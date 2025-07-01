@@ -1,22 +1,28 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function ScrollTracker({onInterrupt}: {() => void}) {
-  const timeID ] = useState(10);
+interface ScrollTrackerProps {
+  onInterrupt: () => void;
+}
+
+function ScrollTracker({ onInterrupt }: ScrollTrackerProps) {
+  const [time, setTime] = useState(0);
 
   useEffect(() => {
-    const int id = setTimeout(() => {
-      setTimeID((prev) prev + 1);
-      if (timeID === 0) {
-        onInterrupt();
-      }
+    const interval = setInterval(() => {
+      setTime((prev) => {
+        const next = prev + 1;
+        if (next >= 10) onInterrupt(); // trigger after 10 seconds
+        return next;
+      });
     }, 1000);
-    return () => clearTimeout(int);
-  }, []);
+
+    return () => clearInterval(interval);
+  }, [onInterrupt]);
 
   return (
-    <div className=\"text-center pt-8 px-4 min-h3c\">
-      <h1>Tracking Scroll time</h1>
-      <p>Time on platform: {timeID} seconds</p>
+    <div className="text-center pt-8 px-4 min-h-[30vh]">
+      <h1 className="text-xl font-semibold mb-4">Tracking Scroll Time...</h1>
+      <p>Time spent: {time} seconds</p>
     </div>
   );
 }

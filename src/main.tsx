@@ -1,11 +1,10 @@
-import '@styles/index.css';
-import 'react';
-import ReactDom from 'react-dom';
+import React from 'react';
+import ReactDom from 'react-dom/client';
 import App from './App';
+import './index.css';
 
-const root = document.getElementById('app');
-if (root) {
-  ReactDom.createRoot(root).render(
+ReactDom.createRoot(document.getElementById('app')!).render(
+  <React.StrictMode>
     <App />
+  </React.StrictMode>
   );
-}
