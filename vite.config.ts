@@ -8,7 +8,7 @@ export default {
   project: 'redirection',
   settings: {
     react: {
-      jsx: ()prisms
+      jsx: 'react-jsx'
     }
   }
 }
